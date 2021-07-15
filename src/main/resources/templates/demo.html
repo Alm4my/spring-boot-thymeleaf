@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Thymeleaf Demo</title>
 </head>
 <body>
-<span th:text="${message}"></span>
+  <main>
+    <span th:text="${message}"></span>
+    <h2>Exam Results</h2>
+    <div th:if="${grade} >= 60" >
+      You passed the exam.
+      <div th:switch="${GPA}"> Your GPA is
+        <span th:case="A">Excellent</span>
+        <span th:case="B">Good</span>
+        <span th:case="C">Okay</span>
+        <span th:case="D">Need improvement</span>
+      </div>
+    </div>
+    <div th:if="${grade} < 60">
+      You failed the exam.
+    </div>
+  </main>
+
+
 </body>
 </html>
