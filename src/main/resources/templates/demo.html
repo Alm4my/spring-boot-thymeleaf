@@ -9,7 +9,7 @@
     <span th:text="${message}"></span>
     <h2>Exam Results</h2>
     <div th:if="${grade} >= 60" >
-      You passed the exam.
+      You did passed the exam.
       <div th:switch="${GPA}"> Your GPA is
         <span th:case="A">Excellent</span>
         <span th:case="B">Good</span>
